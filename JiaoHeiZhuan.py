@@ -48,7 +48,11 @@ def CaiLiao_Num(zhuan: int, boli: int) -> None:
     :param boli:
     :param zhuan:
     """
+    if zhuan / 8 > zhuan // 8:
+        zu = zhuan // 8 + 1
+    else:
+        zu = zhuan // 8
     print(f"需要:\n"
-          f"{zhuan * 4 + boli}个沙子，\n"
-          f"{zhuan * 4}个砂砾，\n"
-          f"{zhuan}个黏土块即{zhuan * 4}个黏土")
+          f"{zu * 4 + boli}个沙子，\n"
+          f"{zu * 4}个砂砾，\n"
+          f"{zu}个黏土块即{zu * 4}个黏土")
