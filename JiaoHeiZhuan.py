@@ -56,3 +56,4 @@ def CaiLiao_Num(zhuan: int, boli: int) -> None:
           f"{zu * 4 + boli}个沙子，\n"
           f"{zu * 4}个砂砾，\n"
           f"{zu}个黏土块即{zu * 4}个黏土")
+
