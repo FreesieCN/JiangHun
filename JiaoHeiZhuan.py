@@ -49,6 +49,6 @@ def CaiLiao_Num(zhuan: int, boli: int) -> None:
     :param zhuan:
     """
     print(f"需要:\n"
-          f"{zhuan * 4 + boli}个沙子，\n"
-          f"{zhuan * 4}个砂砾，\n"
-          f"{zhuan}个黏土块即{zhuan * 4}个黏土")
+          f"{zhuan // 2 + boli}个沙子，\n"
+          f"{zhuan // 2}个砂砾，\n"
+          f"{zhuan // 8}个黏土块即{zhuan // 2}个黏土")
