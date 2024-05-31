@@ -52,8 +52,5 @@ def CaiLiao_Num(zhuan: int, boli: int) -> None:
         zu = zhuan // 8 + 1
     else:
         zu = zhuan // 8
-    print(f"需要:\n"
-          f"{zu * 4 + boli}个沙子，\n"
-          f"{zu * 4}个砂砾，\n"
-          f"{zu}个黏土块即{zu * 4}个黏土")
+    return {'shazi': zu * 4 + 1, 'shali': zu * 4, 'niantu': zu}
 

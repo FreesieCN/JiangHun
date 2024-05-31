@@ -23,8 +23,19 @@ while 1:
         input_cur = input("铸造盆：\n")
     c = int(input_cur)
     cur_JiaoHeiLu = JiaoHeiZhuan.JiaoHeiLu(b, c, a)
-    cur_CaiLiao = cur_JiaoHeiLu.BuildNeed_Num(area, height)
-    JiaoHeiZhuan.CaiLiao_Num(cur_CaiLiao['a'], cur_CaiLiao['b'])
+
+    cur_Block = cur_JiaoHeiLu.BuildNeed_Num(area, height)
+    cur_CaiLiao = JiaoHeiZhuan.CaiLiao_Num(cur_Block['a'], cur_Block['b'])
+    Output_str = (f"需要:\n"
+        f"{cur_CaiLiao['shazi']}个沙子，\n"
+        f"{cur_CaiLiao['shali']}个砂砾，\n"
+        f"{cur_CaiLiao['niantu']}个黏土块即{cur_CaiLiao['niantu'] * 4}个黏土")
+    print(Output_str)
+    
+    f = open(f"./{area}x{area}, {height}.txt2", 'w')
+    f.write(Output_str)
+    f.close()
+
     input_cur = input("是否结束（输入\"是\"或\"否\"）\n")
     while input_cur != '是' and input_cur != '否':
         print("请输入\"是\"或\"否\"")
